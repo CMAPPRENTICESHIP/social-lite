@@ -1,5 +1,5 @@
 Thank you for reading the readme, reader. 
-this is the Readme and goal specification for this work task:
+This is the Readme and goal specification for this work task:
 (Completion: ☐/☑︎)
 
 create a new github repo
