@@ -14,10 +14,10 @@ each of these features I want you to create a new branch and create a pull reque
 ☑︎
 
 feature - add an input field for getting user name
-☐
+☑︎
 
 feature - add an input filed for getting a user email
-☐
+☑︎
 
 feature - add an input field for getting a users phone number
 ☐
