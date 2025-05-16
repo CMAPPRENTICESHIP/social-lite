@@ -20,13 +20,13 @@ feature - add an input filed for getting a user email
 ☑︎
 
 feature - add an input field for getting a users phone number
-☐
+☑︎
 
 feature - add an input filed for getting a users date of birth
-☐
+☑︎
 
 feature - add an input for getting the users favourite colour
-☐
+☑︎
 
 enhancement - use some jquery and js to make populate some elements on the page with each of these details when a submit button is clicked
 ☐
