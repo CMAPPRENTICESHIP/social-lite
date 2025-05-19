@@ -20,7 +20,7 @@
     <tr>
       <td></td>
       <td>
-      <button id="hello" onclick="hello()">hello</button>
+      <button id="hello" onclick="post()">Submit</button>
       </td>
       <td></td>
     </tr>
@@ -32,8 +32,9 @@
   <p id="store">
   </p>
 <script>
-  function hello(){
-    document.getElementById("store").innerHTML = "Hello JavaScript!"
+  function post(){
+    document.getElementById("store").innerHTML = "Hello JavaScript!";
+    document.getElementById("store").innerHTML = document.getElementById("f_name").getValue();
 
   }
 </script>
