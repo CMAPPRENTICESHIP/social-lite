@@ -29,7 +29,7 @@ feature - add an input for getting the users favourite colour
 ☑︎
 
 enhancement - use some jquery and js to make populate some elements on the page with each of these details when a submit button is clicked
-☐
+☑︎
 
 enhancement - change the data of birth to use a date picked instead of the user entering the dob manually
 ☐
