@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <title>Social-Lite; an online contacts log</title>
@@ -30,13 +31,30 @@ Store:
   <p id="store">
   </p>
 <form>
-  <select list="inputs">
+  <select id="store_list">
+	<option>select from inputs</option>
+</select>
 </form>
 </center>
   
 <script>
   function post(){
+	let scan = document.getElementById('store_list');
+	alert( scan.value );
 
+	var options = ["1", "2", "3", "4", "5"];
+	for(var i = 0; i < options.length; i++) {
+	    var opt = options[i];
+	    var el = document.createElement("option");
+	    el.textContent = opt;
+	    el.value = opt;
+	    scan.appendChild(el);
+		}
+
+
+
+	
+    
   document.getElementById("store").innerHTML = document.getElementById("store").innerHTML + "<br><p><table><tr><td>" + document.getElementById("f_name").value + "</td><td>" +  document.getElementById("s_name").value + "</td><td>" + document.getElementById("e_mail").value + "</td><td>" + document.getElementById("t_phone").value + "</td><td>" + document.getElementById("b_date").value + "</td><td>" + document.getElementById("f_colour").value  + "</td></tr></table></p><br>";
   alert( document.getElementById("u_name").value );
   }
