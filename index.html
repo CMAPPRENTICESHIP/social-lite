@@ -7,6 +7,9 @@
   <h1>Store your contacts here:</h1>
 <center>
   <table>
+     <tr>
+      <td align="left"><label for="u_name">Username:</label><input type="text" id="u_name" name="u_name"></th>
+      </tr>
     <tr>
       <td align="left"><label for="f_name">First name:</label><input type="text" id="f_name" name="f_name"></th>
       <td align="center"><label for="s_name">Surname:</label><input type="text" id="s_name" name="s_name"></th>
@@ -33,7 +36,7 @@
 <script>
   
   function post(){
-  document.getElementById("store").innerHTML = document.getElementById("store").innerHTML + "<br><p><table><tr><td></td><td>" + document.getElementById("f_name").value + "</td><td>" +  document.getElementById("s_name").value + "</td><td>" + document.getElementById("e_mail").value + "</td><td>" + document.getElementById("t_phone").value + "</td><td>" + document.getElementById("b_date").value + "</td><td>" + document.getElementById("f_colour").value  + "</td></tr></table></p><br><br>";
+  document.getElementById("store").innerHTML = document.getElementById("store").innerHTML + "<br><p><tableid = " +  document.getElementById("u_name").value + "><tr><td></td><td>" + document.getElementById("f_name").value + "</td><td>" +  document.getElementById("s_name").value + "</td><td>" + document.getElementById("e_mail").value + "</td><td>" + document.getElementById("t_phone").value + "</td><td>" + document.getElementById("b_date").value + "</td><td>" + document.getElementById("f_colour").value  + "</td></tr></table></p><br>";
   }
 </script>
 
