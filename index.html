@@ -1,17 +1,17 @@
-
 <!DOCTYPE html>
 <html>
   <title>Social-Lite; an online contacts log</title>
 
 
 <body>
-  <h1>Store your contacts here:</h1>
+  
 <center>
   <table>
+    <tr><td><h1>Store your contacts here:</h1></td></tr>
     <tr>
-      <td align="left"><label for="f_name">First name:</label><input type="text" id="f_name" name="f_name"></th>
-      <td align="center"><label for="s_name">Surname:</label><input type="text" id="s_name" name="s_name"></th>
-      <td align="right"><label for="e_mail">Email:</label><input type="email" id="e_mail" name="e_mail"></th>
+      <td align="left"><label for="f_name">First name:</label><input type="text" id="f_name" name="f_name"></td>
+      <td align="center"><label for="s_name">Surname:</label><input type="text" id="s_name" name="s_name"></td>
+      <td align="right"><label for="e_mail">Email:</label><input type="email" id="e_mail" name="e_mail"></td>
     </tr>
     <tr>
       <td align="left"><label for="t_phone">Phone number:</label><input type="tel" id="t_phone" name="t_phone"></td>
@@ -21,37 +21,61 @@
     <tr>
       <td></td>
       <td>
-      <button id="hello" onclick="post()">Submit</button>
+      <button id="hello" onclick="postable()">Submit</button>
       </td>
       <td></td>
     </tr>
   </table>
-Store:
-  
-  <p id="store">
-  </p>
-<form>
-  <select id="store_list">
-	<option>select from inputs</option>
+<br><br><br><br>
+<br><br><br><br>
+Store:<select id="store_list" name="store_list" onclick="selectable()">
+		<option>select from inputs</option>
 </select>
-</form>
+<p id="output_field" name="output_field"></p>
+<table name="output_table">
+<br>
+<tr><td>Output:</td></tr>
+    <tr>
+      <td align="left"><label id="f_name_out" name="f_name_out">First name</label></td>
+      <td align="left"><label id="s_name_out" name="f_name_out">Surname</label></td>
+      <td align="left"><label id="e_mail_out" name="e_mail_out">Email</label></td>    
+    </tr>
+    <tr>
+    <td align="left"><label id="t_number_out" name="t_number_out">Telephone</label></td>
+    <td align="left"><label id="b_date_out" name="b_date_out">Birth date</label></td>
+    <td align="left"><label id="f_colour_out" name="f_colour_out">Favourite Colour</label></td>
+    </tr>
+
+</table>
+
 </center>
-  
+ 
+
 <script>
-function post(){
+function postable(){
 	let scan = document.getElementById('store_list');
-	var el = document.createElement("option");
-	data_entry = {"first_name": document.getElementById('f_name').value, "sur_name":document.getElementById('s_name').value, "email":document.getElementById('e_mail').value, "tele_phone":document.getElementById('t_phone').value, "birth_date":document.getElementById('b_date').value, "favourite" :document.getElementById('f_colour').value};
-	el.textContent = document.getElementById('f_name').value;
-	el.value = JSON.stringify(data_entry)
+		var el = document.createElement("option");
+		data_entry = {"first_name": document.getElementById('f_name').value, "sur_name":document.getElementById('s_name').value, "e_mail":document.getElementById('e_mail').value, "tele_phone":document.getElementById('t_phone').value, "birth_date":document.getElementById('b_date').value, "favourite_colour":document.getElementById('f_colour').value};
+		el.textContent = document.getElementById('f_name').value;
+		el.value = JSON.stringify(data_entry)
 	scan.appendChild(el);
-	alert( JSON.parse(el.value).first_name  );
 }
+
+
+function selectable(){
+//document.getElementById('output_field').innerHTML= document.getElementById('store_list').value ;
+
+document.getElementById('f_name_out').innerHTML = JSON.parse(document.getElementById('store_list').value).first_name;
+document.getElementById('s_name_out').innerHTML = JSON.parse(document.getElementById('store_list').value).sur_name;
+document.getElementById('e_mail_out').innerHTML = JSON.parse(document.getElementById('store_list').value).e_mail;
+document.getElementById('t_number_out').innerHTML = JSON.parse(document.getElementById('store_list').value).tele_phone;
+document.getElementById('b_date_out').innerHTML = JSON.parse(document.getElementById('store_list').value).birth_date;
+document.getElementById('f_colour_out').innerHTML = JSON.parse(document.getElementById('store_list').value).favourite_colour;
+
+
+}
+
   
 </script>
-
-
-  
-    
 </body>
 </html>
