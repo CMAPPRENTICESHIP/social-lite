@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
   <title>Social-Lite; an online contacts log</title>
-
-
 <body>
   
 <center>
@@ -56,7 +54,8 @@ function postable(){
 	let scan = document.getElementById('store_list');
 		var el = document.createElement("option");
 		data_entry = {"first_name": document.getElementById('f_name').value, "sur_name":document.getElementById('s_name').value, "e_mail":document.getElementById('e_mail').value, "tele_phone":document.getElementById('t_phone').value, "birth_date":document.getElementById('b_date').value, "favourite_colour":document.getElementById('f_colour').value};
-		el.textContent = document.getElementById('f_name').value;
+		
+    el.textContent = document.getElementById('f_name').value + " " + document.getElementById('s_name').value;
 		el.value = JSON.stringify(data_entry)
 	scan.appendChild(el);
 }
