@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script></head>
-  <title>Social-Lite; an online contacts log</title>
+  <head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+  $(function(){
+    
+
+  });
+  </script>
+  </head>
+<title>Social-Lite; an online contacts log</title>
 <body>
   
 <center>
@@ -42,7 +49,7 @@ Store:<select id="store_list" name="store_list" onclick="selectable()">
     <tr>
     <td align="left"><label id="t_number_out" name="t_number_out">Telephone</label></td>
     <td align="left"><label id="b_date_out" name="b_date_out">Birth date</label></td>
-    <td align="left"><input type="color" id="f_colour_out" readonly="true" name="f_colour_out"></td>
+    <td align="left"><canvas name="color_box" id="color_box" width="50" height="25" style="border:1px solid #000000;"></canvas></td>
     </tr>
 
 </table>
@@ -63,13 +70,17 @@ function postable(){
 
 
 function selectable(){
+     
 try {
+  
 	document.getElementById('f_name_out').innerHTML = JSON.parse(document.getElementById('store_list').value).first_name;
 	document.getElementById('s_name_out').innerHTML = JSON.parse(document.getElementById('store_list').value).sur_name;
 	document.getElementById('e_mail_out').innerHTML = JSON.parse(document.getElementById('store_list').value).e_mail;
 	document.getElementById('t_number_out').innerHTML = JSON.parse(document.getElementById('store_list').value).tele_phone;
 	document.getElementById('b_date_out').innerHTML = JSON.parse(document.getElementById('store_list').value).birth_date;
-	document.getElementById('f_colour_out').value =  JSON.parse(document.getElementById('store_list').value).favourite_colour;
+	
+
+  $("#color_box").css({ 'background' : JSON.parse(document.getElementById('store_list').value).favourite_colour })
 
 }
 catch(err) {
