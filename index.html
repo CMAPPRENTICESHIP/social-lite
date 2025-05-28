@@ -3,11 +3,24 @@
   <head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
   $(function(){
-    
-
+     $("#store_list").click(function(){   
+        try {
+          document.getElementById('f_name_out').innerHTML = JSON.parse(document.getElementById('store_list').value).first_name;
+          document.getElementById('s_name_out').innerHTML = JSON.parse(document.getElementById('store_list').value).sur_name;
+          document.getElementById('e_mail_out').innerHTML = JSON.parse(document.getElementById('store_list').value).e_mail;
+          document.getElementById('t_number_out').innerHTML = JSON.parse(document.getElementById('store_list').value).tele_phone;
+          
+          $("#b_date_out").text( JSON.parse(document.getElementById('store_list').value).birth_date );
+          $("#color_box").css({ 'background' : JSON.parse(document.getElementById('store_list').value).favourite_colour });
+          }
+          catch(err) {
+            return;
+          }
+      });
   });
-  </script>
-  </head>
+
+</script>
+</head>
 <title>Social-Lite; an online contacts log</title>
 <body>
   
@@ -27,14 +40,14 @@
     <tr>
       <td></td>
       <td>
-      <button id="hello" onclick="postable()">Submit</button>
+      <button id="button" name="button" onclick="postable()">Submit</button>
       </td>
       <td></td>
     </tr>
   </table>
 <br><br><br><br>
 <br><br><br><br>
-Store:<select id="store_list" name="store_list" onclick="selectable()">
+Store:<select id="store_list" name="store_list">
 		<option>select from inputs</option>
 </select>
 <p id="output_field" name="output_field"></p>
@@ -69,25 +82,6 @@ function postable(){
 }
 
 
-function selectable(){
-     
-try {
-  
-	document.getElementById('f_name_out').innerHTML = JSON.parse(document.getElementById('store_list').value).first_name;
-	document.getElementById('s_name_out').innerHTML = JSON.parse(document.getElementById('store_list').value).sur_name;
-	document.getElementById('e_mail_out').innerHTML = JSON.parse(document.getElementById('store_list').value).e_mail;
-	document.getElementById('t_number_out').innerHTML = JSON.parse(document.getElementById('store_list').value).tele_phone;
-	document.getElementById('b_date_out').innerHTML = JSON.parse(document.getElementById('store_list').value).birth_date;
-	
-
-  $("#color_box").css({ 'background' : JSON.parse(document.getElementById('store_list').value).favourite_colour })
-
-}
-catch(err) {
-  return;
-}
-
-}
 
   
 </script>
