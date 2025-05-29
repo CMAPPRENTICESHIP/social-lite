@@ -11,18 +11,21 @@
            $.e_mail = JSON.parse(document.getElementById('store_list').value).e_mail;
            $.t_phone = JSON.parse(document.getElementById('store_list').value).tele_phone;
            $.b_date = JSON.parse(document.getElementById('store_list').value).birth_date;
-           $.colour = JSON.parse(document.getElementById('store_list').value).favourite_colour ;
+           $.colour = JSON.parse(document.getElementById('store_list').value).favourite_colour;
           
-          $("#b_date_out").text( $.b_date);
-          $("#color_box").css({ 'background' : $.colour });
+          $('#f_name_out').text( $.f_name );
+          $('#s_name_out').text( $.s_name );
+          $('#e_mail_out').text( $.e_mail );
+          $('#t_phone_out').text( $.t_phone );
+          $('#b_date_out').text( $.b_date );
+          $('#colour_box').css({ 'background' : $.colour });
           
-          
-          }
-          catch(err) {
-            return;
-          }
-      });
+        }
+        catch(err) {
+          return;
+      }
   });
+});
 
 </script>
 </head>
@@ -33,7 +36,7 @@
   <table>
     <tr><td><h1>Store your contacts here:</h1></td></tr>
     <tr>
-      <td align="left"><label for="f_name">First name:</label><input type="text" id="f_name" name="f_name"></td>
+      <td align="left"><label name="f_name">First name:</label><input type="text" id="f_name" name="f_name"></td>
       <td align="center"><label for="s_name">Surname:</label><input type="text" id="s_name" name="s_name"></td>
       <td align="right"><label for="e_mail">Email:</label><input type="email" id="e_mail" name="e_mail"></td>
     </tr>
@@ -65,9 +68,9 @@ Store:<select id="store_list" name="store_list">
       <td align="left"><label id="e_mail_out" name="e_mail_out">Email</label></td>    
     </tr>
     <tr>
-    <td align="left"><label id="t_number_out" name="t_number_out">Telephone</label></td>
+    <td align="left"><label id="t_phone_out" name="t_phone_out">Telephone</label></td>
     <td align="left"><label id="b_date_out" name="b_date_out">Birth date</label></td>
-    <td align="left"><canvas name="color_box" id="color_box" width="50" height="25" style="border:1px solid #000000;"></canvas></td>
+    <td align="left"><canvas name="colour_box" id="colour_box" width="100" height="25" style="border:1px solid #000000;"></canvas></td>
     </tr>
 
 </table>
