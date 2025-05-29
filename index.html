@@ -2,6 +2,26 @@
 <html>
   <head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
+
+  function postable(){
+    $.scan = document.getElementById('store_list');
+    $.el = document.createElement("option");
+    $.data_entry = {
+                      "first_name":$('#f_name').val(), 
+                      "sur_name":$('#s_name').val(), 
+                      "e_mail":$('#e_mail').val(), 
+                      "tele_phone":$('#t_phone').val(), 
+                      "birth_date":$('#b_date').val(), 
+                      "favourite_colour": $("#f_colour").val()
+                    };
+    
+    $.el.value = JSON.stringify($.data_entry)
+    $.el.textContent = $('#f_name').val() + " " + $('#s_name').val();
+    $.scan.appendChild($.el);
+  }
+
+
+
   $(function(){
      $("#store_list").click(function(){   
         try {
@@ -67,6 +87,7 @@ Store:<select id="store_list" name="store_list">
       <td align="left"><label id="s_name_out" name="f_name_out">Surname</label></td>
       <td align="left"><label id="e_mail_out" name="e_mail_out">Email</label></td>    
     </tr>
+
     <tr>
     <td align="left"><label id="t_phone_out" name="t_phone_out">Telephone</label></td>
     <td align="left"><label id="b_date_out" name="b_date_out">Birth date</label></td>
@@ -76,22 +97,5 @@ Store:<select id="store_list" name="store_list">
 </table>
 
 </center>
- 
-
-<script>
-function postable(){
-	let scan = document.getElementById('store_list');
-		var el = document.createElement("option");
-		data_entry = {"first_name": document.getElementById('f_name').value, "sur_name":document.getElementById('s_name').value, "e_mail":document.getElementById('e_mail').value, "tele_phone":document.getElementById('t_phone').value, "birth_date":document.getElementById('b_date').value, "favourite_colour":document.getElementById('f_colour').value};
-		
-    el.textContent = document.getElementById('f_name').value + " " + document.getElementById('s_name').value;
-		el.value = JSON.stringify(data_entry)
-	scan.appendChild(el);
-}
-
-
-
-  
-</script>
 </body>
 </html>
