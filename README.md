@@ -38,4 +38,4 @@ enhancement - have the colour picker have a box that lets the user preview and s
 ☑︎
 
 enhancement - have the elements you have wrapped with the colour of the users fave colour and then clear the input boxes so you can then enter another user
-☐
+☑︎ (partial)
