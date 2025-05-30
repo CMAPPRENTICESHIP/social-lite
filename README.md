@@ -32,10 +32,10 @@ enhancement - use some jquery and js to make populate some elements on the page 
 ☑︎
 
 enhancement - change the data of birth to use a date picked instead of the user entering the dob manually
-☐
+☑︎
 
 enhancement - have the colour picker have a box that lets the user preview and select the colour which is then stored as a hex value
-☐
+☑︎
 
 enhancement - have the elements you have wrapped with the colour of the users fave colour and then clear the input boxes so you can then enter another user
 ☐

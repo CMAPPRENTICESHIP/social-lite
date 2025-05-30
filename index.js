@@ -1,5 +1,4 @@
- 
-  $(function(){
+   $(function(){
      $("#store_list").click(function(){   
         try {
           //load from input fields to JQuery variables (unable to call a JSON function at the moment inside a JQuery expression) 
