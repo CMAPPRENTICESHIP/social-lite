@@ -2,13 +2,32 @@
 <html>
   <head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="index.js"></script>
+  <style>
+    p{
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      background-color: #dddddd;
+    }
+
+    td, th {
+      border: 1px solid #ffffff;
+      text-align: left;
+      padding: 8px;
+    }
+</style>
 </head>
 <title>Social-Lite; an online contacts log</title>
 <body>
   
 <center>
   <table>
-    <tr><td><h1>Store your contacts here:</h1></td></tr>
+    <tr><td><h1>Enter contacts details:</h1></td></tr>
     <tr>
       <td align="left"><label name="f_name">First name:</label><input type="text" id="f_name" name="f_name"></td>
       <td align="center"><label for="s_name">Surname:</label><input type="text" id="s_name" name="s_name"></td>
@@ -29,7 +48,7 @@
   </table>
 <br><br><br><br><br><br><br><br>
 
-Store:
+<p>Stored entries:</p>
 <select id="store_list" name="store_list"><option>select from inputs</option></select>
 <p id="output_field" name="output_field"></p>
 <table name="output_table">
